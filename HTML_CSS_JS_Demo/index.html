@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML,CSS & JavaScript</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <link type="text/css" rel="stylesheet" href="js/common/pop/css/style.css" />
+    <script type="text/javascript" src="js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/common/pop/pop.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Index.navigateInit();
+        })
+
+        //恢复转义html
+        function unescapeHtml(str) {
+            return str.replace(/&quot;/g, '"')
+                    .replace(/&lt;/g, "<")
+                    .replace(/&gt;/g, ">")
+                    .replace(/&amp;/g, "&")
+                    .replace(/&#([\d]+);/g, function ($0, $1) {
+                        return String.fromCharCode(parseInt($1, 10));
+           });
+        }
+    </script>
+</head>
+<body>
+        <div class="wrap">
+            <header class="header">HTML,CSS and Javascript</header>
+            <div class="main">
+                <div class="main-left">
+                    <div class="course-title"><div class="title-cnt">课程列表</div></div>
+                    <div class="course-list">
+                        <h2>HTML</h2>
+                        <ul>
+                            <li><a href="#">HTML概述</a></li>
+                            <li><a href="#">块级元素和内联元素</a></li>
+                        </ul>
+                        <h2>CSS</h2>
+                        <ul>
+                            <li><a href="#">CSS概述</a></li>
+                            <li><a href="#">CSS 类选择器</a></li>
+                            <li><a href="#">CSS ID选择器</a></li>
+                            <li><a href="#">CSS 派生选择器</a></li>
+                            <li><a href="#">CSS 属性选择器</a></li>
+                            <li><a href="#">CSS 内边距</a></li>
+                            <li><a href="#">CSS 外边距</a></li>
+                            <li><a href="#">CSS 边距和边框的要点说明</a></li>
+                        </ul>
+                        <h2>一个完整的例子</h2>
+                        <ul>
+                            <li><a href="#">Step 1: 效果图</a></li>
+                            <li><a href="pages/demo/step02.html" target="_blank">Step 2: 框架布局</a></li>
+                            <li><a href="pages/demo/step03.html" target="_blank">Step 3: 内容区域布局细化</a></li>
+                            <li><a href="pages/demo/step04.html" target="_blank">Step 4: 收尾完工</a></li>
+                        </ul>
+                        <h2>JavaScript</h2>
+                        <ul>
+                            <li><a href="#">学习路线</a></li>
+                            <li><a href="#">弹出框示例</a></li>
+                            <li><a href="#">弹出框demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <iframe id="main-content" frameborder="0" src="pages/html/overview.html"></iframe>
+                </div>
+            </div>
+            <footer class="footer">editor by snail.</footer>
+        </div>
+</body>
+</html>

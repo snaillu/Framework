@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview of HTML</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+    <h2>ID选择器</h2>
+    <p>ID选择器可以为标有特定ID的标签元素指定样式。根据标签的ID来选择元素，具有唯一性。</p>
+
+    <p>ID选择器通常的写法如下</p>
+    <pre class="brush:css;">
+        #filelist{padding:5px 2px 2px 2px;color:red;}
+
+        #item a{color:white;font-size:1.5rem;}
+
+        #index1,#index2{margin-left:20px;color:red;}
+    </pre>
+
+    <p><font color="red">注意：</font>根据元素ID来选择元素，具有唯一性，这意味着同一id在同一文档页面中只能出现一次。尽管你会发现随便
+    把几个标签都定义相同的ID，css选择器还是会把这些元素都选中应用样式。但出于编程的习惯，相同的id不要再页面中出现两次（JS中只选中第一个元素）。
+    </p>
+</body>
+</html>

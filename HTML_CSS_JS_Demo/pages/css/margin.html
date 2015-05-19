@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview of HTML</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+        function showHtml(html) {
+            parent.layer.html({
+                html: html,
+                time: 9
+            });
+        };
+
+        function showPaddingClick() {
+            var nopadding = '<div style="background-color:orange;"><div>this is div</div></div>',
+                padding = '<div style="background-color:orange;"><div style="padding:15px;">this is div</div></div>';
+
+            showHtml(nopadding+"<p>-----------下面padding:15px;-------------</p>"+padding);
+        }
+    </script>
+</head>
+<body>
+    <h2>外边距</h2>
+    <p>围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”。</p>
+    <p>设置外边距的最简单的方法就是使用 margin 属性，这个属性接受任何长度单位、百分数值甚至负值。</p>
+
+    <p>margin通常的写法</p>
+    <pre class="brush:css;">
+        div{margin:5px;}
+        
+        div{margin:15px 8em 4px 9%;}
+
+        div{margin:0 auto;}
+
+        div{margin-top:-100px;}
+    </pre>
+
+    <h3>关于一些用法的说明</h3>
+    <p>margin 简写属性在一个声明中设置所有外边距属性。该属性可以有 1 到 4 个值。</p>
+    <h4>例1</h4>
+    <pre class="brush:css;">
+        margin:10px 5px 20px 25px;
+        上边距是 10px
+        右边距是 5px
+        下边距是 20px
+        左边距是 25px
+    </pre>
+
+    <h4>例2</h4>
+    <pre class="brush:css;">
+        margin:10px 5px 20px;
+        上边距是 10px
+        右边距是 5px
+        下边距是 20px
+    </pre>
+
+    <h4>例3</h4>
+    <pre class="brush:css;">
+        margin:10px 5px;
+        上边距和下边距是 10px
+        右边距和左边距是 5px
+    </pre>
+
+    <h4>例4</h4>
+    <pre class="brush:css;">
+        margin:10px;
+        4个外边距都是 10px
+    </pre>
+</body>
+</html>

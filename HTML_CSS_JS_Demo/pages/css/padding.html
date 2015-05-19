@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview of HTML</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+        function showHtml(html) {
+            parent.layer.html({
+                html: html,
+                time: 9
+            });
+        };
+
+        function showPaddingClick() {
+            var nopadding = '<div style="background-color:orange;"><div>this is div</div></div>',
+                padding = '<div style="background-color:orange;"><div style="padding:15px;">this is div</div></div>';
+
+            showHtml(nopadding+"<p>-----------下面padding:15px;-------------</p>"+padding);
+        }
+    </script>
+</head>
+<body>
+    <h2>内边距</h2>
+    <p>元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性。</p>
+    <p>padding 属性接受长度值或百分比值，但不允许使用负值。</p>
+    <p>padding 的四个单独的属性，分别设置上、右、下、左内边距。</p>
+
+    <p>padding通常的写法</p>
+    <pre class="brush:css;">
+        div{padding:5px;}
+        
+        div{padding:15px 8em 4px 9%;}
+    </pre>
+
+    <h3>效果演示</h3>
+    <pre class="brush:css;">
+        <div id="demo"><div>this is div</div></div>
+
+        #demo div{padding:10px;}
+    </pre>
+    <p><button onclick="showPaddingClick()">查看演示</button></p>
+</body>
+</html>

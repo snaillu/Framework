@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Selector of CSS</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <h2>类选择器</h2>
+    <p>类选择器通常的写法如下：</p>
+    <pre class="brush:css;">
+        .item{margin:0 auto;text-align:center;}
+
+        .parent .child{height:50px;position:absolute;left:0;right:0;border:1px solid orange;}
+
+        .main-left,.main-right{width:50%;height:100%;float:left;}
+    </pre>
+
+    <h2>示例</h2>
+    <p>示例1：</p>
+    <pre class="brush:css;">
+        <div class="wrap"></div>
+
+        给wrap添加样式：
+
+        .wrap{border:1px solid orange;float:right;}
+    </pre>
+
+    <p>示例2：</p>
+    <pre class="brush:css;">
+        <div class="wrap"><div class="inner"></div></div>
+
+        给wrap下面的inner添加样式：
+
+        .wrap .inner{padding:2px;margin:10px;}
+    </pre>
+
+    <p>示例3：</p>
+    <pre class="brush:css;">
+        <div class="wrap">
+            <p>p1</p>
+            <a>a1</a>
+            <p>p2</p>
+            <div>div12</div>
+        </div>
+
+        给wrap下面的p元素添加样式：
+
+        .wrap p{background-color:#fff;}
+    </pre>
+
+    <p>示例4：</p>
+    <pre class="brush:css;">
+        <div class="wrap">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+        </div>
+
+        给inner1,inner2添加样式：
+        
+        .inner1,.inner2{width:50%;height:100%;float:left;text-align:center;}
+        .inner1{background-color:orange;}
+        .inner2{background-color:green;}
+    </pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview of HTML</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+        //pop html info
+        function showHtml(html) {
+            parent.layer.html({
+                html: html,
+                time: 9
+            });
+        }
+
+        function tagListClick() {
+            var list = [];
+            $("#taglist code").each(function () {
+                list.push($(this).html());
+            });
+            
+            showHtml(parent.unescapeHtml(list.join("<br/>")));
+        }
+    </script>
+</head>
+<body>
+    <h2>什么是HTML</h2>
+    <p>
+        HTML(Hypertext Markup Language),超文本标记语言，相对于“文本”而言，“超文本”就是指页面可以包含图片，链接，表格，声音等。
+    </p>
+    <h2>HTML长什么样</h2>
+    <p>
+        <img src="../../images/html.png" />
+    </p>
+    <h2>经常使用的标签</h2>
+    <p>
+        <pre id="taglist" class="brush: js;">
+        <b>Bold</b>
+        <i>italic</i>
+        <u>underline</u>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <p>p</p>
+        <br />
+        <a>this is a</a>
+        <div>This is div</div>
+        <span>This is span</span>
+        <ul>
+            <li>this is li</li>
+        </ul>
+        </pre>
+    </p>
+    <p><button onclick='tagListClick()'>查看演示</button></p>
+</body>
+</html>

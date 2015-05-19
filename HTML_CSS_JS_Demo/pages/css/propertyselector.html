@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview of HTML</title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <style type="text/css">
+        th{text-align:left;}
+    </style>
+
+</head>
+<body>
+    <h2>属性选择器</h2>
+    <p>可以为拥有指定属性的 HTML 元素设置样式，而不仅限于 class 和 id 属性。</p>
+    <p>属性选择器通常的写法：</p>
+    <pre class="brush:css;">
+        [title]{color:red;}
+
+        [title=message]{color:orange;}
+        
+        input[type="text"]{width:120px;border:1px solid orange;color:black;}
+    </pre>
+
+    <h4>CSS 选择器参考手册</h4>
+    <table>
+        <tbody>
+            <tr>
+                <th style="width:30%;">选择器</th>
+                <th>描述</th>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>]</td>
+                <td>用于选取带有指定属性的元素。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>=<i>value</i>]</a></td>
+                <td>用于选取带有指定属性和值的元素。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>~=<i>value</i>]</td>
+                <td>用于选取属性值中包含指定词汇的元素。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>|=<i>value</i>]</td>
+                <td>用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>^=<i>value</i>]</td>
+                <td>匹配属性值以指定值开头的每个元素。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>$=<i>value</i>]</td>
+                <td>匹配属性值以指定值结尾的每个元素。</td>
+            </tr>
+            <tr>
+                <td>[<i>attribute</i>*=<i>value</i>]</td>
+                <td>匹配属性值中包含指定值的每个元素。</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

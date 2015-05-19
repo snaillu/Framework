@@ -1,0 +1,18 @@
+﻿.wrap{width:80%;height:100%;margin:0 auto;overflow:hidden;}
+.header,.footer{text-align:center;}
+.header{height:7%;font-size:28px;}
+.footer{height:3%;font-size:12px;}
+.main{height:90%;border:1px solid #A0A0A0;}
+.main-left,.main-right{float:left;}
+.main-left{width:25%;height:100%;background-color:#EFEFEF;}
+.main-right{width:75%;height:100%;}
+
+/* style of main-left */
+.course-title{height:8%;font-size:20px;background-color:#BEBEBE;color:white;display:flex;}
+.title-cnt{vertical-align:middle;display:flex;align-items:center;margin:0 auto;}
+.course-list li{padding:3px 3px 3px 15px;font-size:14px;}
+/* end */
+
+/* style of main-right */
+#main-content{width:100%;height:100%;border-left:1px solid #A0A0A0;}
+/* end */

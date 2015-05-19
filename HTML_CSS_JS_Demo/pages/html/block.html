@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../../js/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../js/lib/syntaxhighlighter_3.0.83/styles/shCoreDefault.css" />
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+        //pop html info
+        function showHtml(html) {
+            parent.layer.html({
+                html: html,
+                time: 9
+            });
+        };
+
+        function getHtml(id) {
+            var list = [];
+            $("#" + id + " code").each(function () {
+                list.push($(this).html());
+            });
+
+            return parent.unescapeHtml(list.join("<br/>"))
+        };
+
+        function blockListClick() {
+            showHtml(getHtml("blocklist"));
+        };
+
+        function inlineBlockListClick() {
+            showHtml(getHtml("inlineblocklist"));
+        };
+
+        function inlineToBlockClick() {
+            showHtml('<span style="display:block;">span1</span><span style="display:block;">span2</span>');
+        };
+
+        function blockToInlineClick() {
+            showHtml('<div style="display:inline-block;">div1</div><div style="display:inline-block;">div2</div>');
+        };
+    </script>
+
+</head>
+<body>
+    <h2>HTML块元素</h2>
+    <p>块级元素在浏览器中显示时，通常会以新的行来开始。</p>
+    <pre class="brush: js;">例如：h1,p,ul,table,div</pre>
+    <pre id="blocklist" class="brush: js;">
+    示例：
+    <div>div1</div><div>div2</div>
+    </pre>
+    <p><button onclick="blockListClick();">查看演示</button></p>
+    
+    <h2>HTML内联元素</h2>
+    <p>内联元素在浏览器中显示通常不会以新的行开始</p>
+    <pre class="brush: js;">例如：b,td,a,span</pre>
+    <pre id="inlineblocklist" class="brush: js;">
+    示例：
+    <span>span1</span><span>span2</span>
+    </pre>
+    <p><button onclick="inlineBlockListClick();">查看演示</button></p>
+    
+    <h2>块元素与内联元素能否转换</h2>
+    <p>答案：可以</p>
+    <pre id="inlinetoblock" class="brush: js;">
+    示例：(内联转换为块)
+    <span style="display:block;">span1</span><span style="display:block;">span2</span>
+    </pre>
+    <p><button onclick="inlineToBlockClick();">查看演示</button></p>
+    <pre id="blocktoinline" class="brush: js;">
+    示例：(块转换为内联)
+    <div style="display:inline-block;">div1</div><div style="display:inline-block;">div2</div>
+    </pre>
+    <p><button onclick="blockToInlineClick();">查看演示</button></p>
+</body>
+</html>
